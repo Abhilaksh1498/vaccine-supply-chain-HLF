@@ -40,3 +40,19 @@ Inside fabric-samples/commercial-paper/organization/digibank/application directo
 ```
 node buyFrontend.js
 ```
+
+## Connecting Hyperledger Explorer to our network 
+(Used for better front end visualization of channel, chaincodes, block data, transaction read/write states etc.)
+1. Copy the name of the file under fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/
+(It should be something similar to this 8e98d26e813bbd63a9ad0df5f499101ce90e4bd28004435b229e5df1bf0fdeaf_sk)
+2. Open the file test-network.json inside explorer/connection-profile
+3. modify the value of key ("path") at line# 32. Replace the last part of the path with the name you just copied
+4. Open a terminal inside the directory explorer and run the following to start the explorer
+```
+docker-compose up -d
+```
+5. Go to localhost:8080 and use 'exploreradmin' and 'exploreradminpw' (without the single quotations) as the username and password respectively 
+6. To close the explorer, run the following inside the same directory
+```
+docker-compose down -v
+```
