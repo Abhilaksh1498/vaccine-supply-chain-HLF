@@ -30,8 +30,9 @@ node enrollUser.js
 ```
 
 ## Now we can run various client applications as defined in application folder of respective orgs
-For examples
-Inside fabric-samples/commercial-paper/organization/magnetocorp/application directory
+For example
+
+Open terminal inside fabric-samples/commercial-paper/organization/magnetocorp/application directory and run
 ```
 node issueFrontend.js
 ```
